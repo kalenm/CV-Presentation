@@ -2,7 +2,7 @@ import cv2
 from cv2 import RETR_TREE
 import numpy as np
 
-cap = cv2.VideoCapture(2)
+cap = cv2.VideoCapture(0)
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
 kernel = np.ones((7,7),np.uint8)
