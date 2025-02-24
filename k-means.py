@@ -5,7 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Creates list of images to process along with an output list to draw them later
-pics = [cv2.imread('Python\pictures\zune.jpg'),cv2.imread('Python\pictures\gun.jpg'), cv2.imread('Python\pictures\pip.jpg'), cv2.imread('Python\pictures\clouds.jpeg')]
+pics = [cv2.imread('pictures/zune.jpg'),cv2.imread('pictures/gun.jpg'), 
+        cv2.imread('pictures/pip.jpg'), cv2.imread('pictures/clouds.jpeg')]
 output = []
 
 plt.rcParams["figure.figsize"] = (14,14)
@@ -41,5 +42,5 @@ for i in range(len(output)):
     plt.axis('off')
     plt.imshow(output[i])
 
-
-plt.show()
+plt.savefig(f"pictures/kmeans-{k}.png", bbox_inches='tight')
+# plt.show()
