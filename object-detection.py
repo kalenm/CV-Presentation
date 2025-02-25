@@ -3,8 +3,10 @@ from cv2 import RETR_TREE
 import numpy as np
 
 cap = cv2.VideoCapture(0)
-frame_width = int(cap.get(3))
-frame_height = int(cap.get(4))
+print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+
+frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 kernel = np.ones((7,7),np.uint8)
 
 while(1):
