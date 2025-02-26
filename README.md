@@ -38,6 +38,7 @@ shark-detection.py
 
 I'm bored of the lorem ipsum text so I'm just putting random stuff here for the same purpose.
 
+imx219_noir.json
+-----
 
-
-
+Ok I will actually write a blurb about this ahead of time. This is the tuning file needed for the imx219 sensor when it is used with arducam lenses as it has no ir filter, and without the proper tuning file the image looks very pink.
