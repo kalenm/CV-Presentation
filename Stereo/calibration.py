@@ -2,7 +2,6 @@ import cv2
 from cv2 import RETR_TREE
 import numpy as np
 import threading
-
 # # Setting up both cameras for video capture
 # camL = cv2.VideoCapture(0)
 # camR = cv2.VideoCapture(1)

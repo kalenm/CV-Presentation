@@ -12,7 +12,7 @@ frame_height_L = int(camL.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 frame_width_R = int(camR.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height_R = int(camR.get(cv2.CAP_PROP_FRAME_HEIGHT))
-
+print(frame_height_L,frame_height_R,frame_width_L,frame_width_R)
 if frame_width_L != frame_width_R or frame_height_L != frame_height_R:
     #TODO: Allow users to user to use different camera sensors and set them to be equal resolutions
     raise cv2.error('Current implementation does not allow for cameras with different frame sizes, please change cameras to identical sensors') 
