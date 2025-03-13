@@ -1,19 +1,21 @@
 import cv2
 from cv2 import RETR_TREE
 import numpy as np
+import picamera2 
 
 cap = cv2.VideoCapture(0)
 print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-
+picam = picamera2.Picamera2()
+picam.start()
 frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 kernel = np.ones((7,7),np.uint8)
 
 while(1):
 
-    # Take each frame
-    _, frame = cap.read()
-
+    # Take each frame - This is how you use pure cv2, doesnt work with picameras
+    #_, frame = cap.read()
+    frame = picam.capture_array()
     # Convert BGR to HSV
     hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
     hsvInvert = cv2.bitwise_not(hsv)
